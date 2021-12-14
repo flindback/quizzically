@@ -1,0 +1,80 @@
+.card {
+  display: flex;
+  padding: 1.25rem;
+  border-radius: 20px;
+  width: 600px;
+  min-height: 150px;
+  color: #212121;
+  background-color: rgb(250, 249, 240);
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: 85vw;
+    flex-direction: column;
+
+    &__heading {
+      margin-bottom: 0;
+    }
+  }
+
+  &--first {
+    background: rgb(240, 105, 6);
+    background: linear-gradient(
+      0deg,
+      rgba(240, 105, 6, 1) 0%,
+      rgba(182, 8, 50, 1) 100%
+    );
+    color: white;
+    font-weight: 500;
+    flex-direction: column;
+    &__heading {
+      font-size: 1.5rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    min-width: 85%;
+    padding-right: 1.25rem;
+  }
+
+  &__answer {
+    padding: 0.5rem 0.5rem;
+    padding-bottom: 0;
+    margin: 0 0;
+  }
+}
+
+.gradient-border {
+  background: rgb(240, 105, 6);
+  background: linear-gradient(
+    0deg,
+    rgba(240, 105, 6, 1) 0%,
+    rgba(182, 8, 50, 1) 100%
+  );
+  padding: 4px;
+  width: min-content;
+  margin: 1rem auto;
+  border-radius: 20px;
+}
+
+.emphasize {
+  font-weight: bolder;
+  text-decoration: double;
+
+  &--wrong,
+  &--right {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+  }
+
+  &--wrong {
+    text-decoration-color: rgba(182, 8, 50, 0.8);
+  }
+
+  &--right {
+    text-decoration-color: rgba(41, 130, 18, 0.8);
+  }
+}
